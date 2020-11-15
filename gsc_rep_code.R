@@ -38,9 +38,9 @@ min_dta$adm_rate = min_dta$adm_rate * 100
 
 min <- gsynth(perc_min_ft ~ factor(test_optional) + ln_ug_fte  + adm_rate + ln_avg_grant + ln_tuition_in, 
                data = min_dta, index = c("unitid","year"), 
-               force = "two-way", CV = FALSE, r = c(0,4), se = TRUE, 
+               force = "two-way", CV = FALSE, r = c(0,9), se = TRUE, 
                inference = "parametric", nboots = 2500, parallel = TRUE, 
-               min.T0 = 6, seed = 123)
+               min.T0 = 11, seed = 123)
 ## TCA
 #### preprocessing
 pell_ct = pell$Y.ct.cnt
